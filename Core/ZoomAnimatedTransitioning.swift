@@ -200,7 +200,7 @@ class ZoomInAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
         var transitionViewFinalFrame = finalFrame
         if let referenceImageView = referenceImageView {
             transitionView = UIImageView(image: referenceImageView.image)
-            transitionView!.contentMode = UIViewContentMode.scaleAspectFill
+            transitionView!.contentMode = UIView.ContentMode.scaleAspectFill
             transitionView!.clipsToBounds = true
             transitionView!.frame = containerView.convert(referenceImageView.bounds, from: referenceImageView)
             containerView.addSubview(transitionView!)
@@ -219,7 +219,7 @@ class ZoomInAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
 
         let duration: TimeInterval = transitionDuration(using: transitionContext)
 
-        UIView.animate(withDuration: duration, delay:0, usingSpringWithDamping:0.7, initialSpringVelocity:0, options: UIViewAnimationOptions.curveLinear, animations: {
+        UIView.animate(withDuration: duration, delay:0, usingSpringWithDamping:0.7, initialSpringVelocity:0, options: UIView.AnimationOptions.curveLinear, animations: {
             fromViewController.view.alpha = 0
             transitionView?.frame = transitionViewFinalFrame
             transitionView?.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
@@ -292,7 +292,7 @@ class ZoomOutAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
             transitionViewFinalFrame = referenceSlideshowViewFrame
 
             // do a frame scaling when AspectFit content mode enabled
-            if fromViewController.slideshow.currentSlideshowItem?.imageView.image != nil && referenceImageView.contentMode == UIViewContentMode.scaleAspectFit {
+            if fromViewController.slideshow.currentSlideshowItem?.imageView.image != nil && referenceImageView.contentMode == UIView.ContentMode.scaleAspectFit {
                 transitionViewFinalFrame = containerView.convert(referenceImageView.aspectToFitFrame(), from: referenceImageView)
             }
 
@@ -310,7 +310,7 @@ class ZoomOutAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
         containerView.sendSubview(toBack: transitionBackgroundView)
 
         let transitionView: UIImageView = UIImageView(image: fromViewController.slideshow.currentSlideshowItem?.imageView.image)
-        transitionView.contentMode = UIViewContentMode.scaleAspectFill
+        transitionView.contentMode = UIView.ContentMode.scaleAspectFill
         transitionView.clipsToBounds = true
         transitionView.frame = transitionViewInitialFrame
         containerView.addSubview(transitionView)
@@ -351,7 +351,7 @@ class ZoomOutAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
             interruptibleAnimator(using: transitionContext).startAnimation()
         } else {
             let params = animationParams(using: transitionContext)
-            UIView.animate(withDuration: params.0, delay: 0, options: UIViewAnimationOptions(), animations: params.1, completion: params.2)
+            UIView.animate(withDuration: params.0, delay: 0, options: UIView.AnimationOptions(), animations: params.1, completion: params.2)
         }
     }
 }

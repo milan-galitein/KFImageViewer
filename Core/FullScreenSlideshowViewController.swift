@@ -13,11 +13,11 @@ open class FullScreenSlideshowViewController: UIViewController {
     open var slideshow: KFImageViewer = {
         let slideshow = KFImageViewer()
         slideshow.zoomEnabled = true
-        slideshow.contentScaleMode = UIViewContentMode.scaleAspectFit
+        slideshow.contentScaleMode = UIView.ContentMode.scaleAspectFit
         slideshow.pageIndicatorPosition = PageIndicatorPosition(horizontal: .center, vertical: .bottom)
         // turns off the timer
         slideshow.slideshowInterval = 0
-        slideshow.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        slideshow.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
 
         return slideshow
     }()
@@ -62,8 +62,8 @@ open class FullScreenSlideshowViewController: UIViewController {
         view.addSubview(slideshow)
 
         // close button configuration
-        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControlState())
-        closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControlEvents.touchUpInside)
+        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
+        closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
         view.addSubview(closeButton)
     }
 
@@ -95,7 +95,7 @@ open class FullScreenSlideshowViewController: UIViewController {
                 safeAreaInsets = UIEdgeInsets.zero
             }
             
-            closeButton.frame = closeButtonFrame ?? CGRect(x: max(10, safeAreaInsets.left), y: max(10, safeAreaInsets.top), width: 40, height: 40)
+            closeButton.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right), y: max(10, safeAreaInsets.top), width: 40, height: 40)
         }
 
         slideshow.frame = view.frame
