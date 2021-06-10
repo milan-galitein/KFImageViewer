@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 /** 
     Used to represent position of the Page Control

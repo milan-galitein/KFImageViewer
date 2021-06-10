@@ -5,7 +5,7 @@
 //  Created by feiin
 //
 //
-
+import KFImageViewer
 import Kingfisher
 
 /// Input Source to image using Kingfisher
