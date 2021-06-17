@@ -25,6 +25,7 @@
 		488B7D309A48FBF0233E263579738BCB /* ImageSlideshowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CBD578849483038284D57F37756EB /* ImageSlideshowItem.swift */; };
 		4C8D5E460C65D641894964383CC53FD6 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D15DA39C6E2CF68AE532F962CF22B9 /* Resource.swift */; };
 		517A5D0D41318E77242028CD83047EA2 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D10678DCDE585C27DF431ED1FC4FCF /* AnimatedImageView.swift */; };
+		573C6C99267B53B600B6C3E0 /* ImageAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 573C6C98267B53B600B6C3E0 /* ImageAsset.xcassets */; };
 		57ACFA0C53C4ACBF9C227A86DC307DF5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA0EE7A103885B0606126A579FBFF3 /* ImageDownloader.swift */; };
 		5C8C14F0654FB3F64F9D3020B64DFAEE /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11373FF82ED248D8BE23AE3AAA7840D6 /* Filter.swift */; };
 		68BE450919CE9FAA6CFF7C1B3C0DA686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5B9F56AF93CF31B0A76C4DBBC25A23 /* Foundation.framework */; };
@@ -118,6 +119,7 @@
 		5298559F0D9F17A792A35758E531A726 /* KFImageViewer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageViewer.swift; path = Core/KFImageViewer.swift; sourceTree = "<group>"; };
 		539F59F4EFCE4F0C5DB63B34836DDAD4 /* Pods-KFImageViewer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KFImageViewer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		55E144FCB7AAE500AB0AA2D25F6973FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		573C6C98267B53B600B6C3E0 /* ImageAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAsset.xcassets; sourceTree = "<group>"; };
 		576CF382BD3F4D00B6D63BAE817C42E3 /* Pods-KFImageViewer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KFImageViewer_Example-dummy.m"; sourceTree = "<group>"; };
 		593766F839E7E059C1FFDFEFC7279F59 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
 		5C20789773955A744DFBF7E647495238 /* PageIndicatorPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageIndicatorPosition.swift; path = Core/PageIndicatorPosition.swift; sourceTree = "<group>"; };
@@ -161,11 +163,9 @@
 		CF58A2C8B2D1E80C830DD92F91F41CBD /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		D0F9CD718F0A06821311D51A356B1ECA /* KFImageViewer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KFImageViewer-prefix.pch"; sourceTree = "<group>"; };
 		D16B9DEF218A0C34A238DE7F12989808 /* Pods_KFImageViewer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KFImageViewer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2EE7C646580BF6B8DAB4B82C6B05298 /* ic_cross_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "ic_cross_white@3x.png"; sourceTree = "<group>"; };
 		D4EFDAE0F82B6DC9A9FD82FE2FE29796 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		DA4898867061D203311A4AC3C7A70B2F /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
 		E580022B119200297BCD2257A0A929E6 /* KFImageViewer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KFImageViewer.xcconfig; sourceTree = "<group>"; };
-		ED4A0C33D0F3B39DD9D8DE02C1D38667 /* ic_cross_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "ic_cross_white@2x.png"; sourceTree = "<group>"; };
 		F0088FC709E3907A18952C072C9C8368 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
 		F95CBD578849483038284D57F37756EB /* ImageSlideshowItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSlideshowItem.swift; path = Core/ImageSlideshowItem.swift; sourceTree = "<group>"; };
 		FD558208F513A70BEAAEF555B991A11C /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
@@ -332,8 +332,7 @@
 		6F83A99E82305D4F4012F30951409750 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ED4A0C33D0F3B39DD9D8DE02C1D38667 /* ic_cross_white@2x.png */,
-				D2EE7C646580BF6B8DAB4B82C6B05298 /* ic_cross_white@3x.png */,
+				573C6C98267B53B600B6C3E0 /* ImageAsset.xcassets */,
 			);
 			name = Resources;
 			path = Core/Resources;
@@ -556,6 +555,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -576,6 +576,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573C6C99267B53B600B6C3E0 /* ImageAsset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
