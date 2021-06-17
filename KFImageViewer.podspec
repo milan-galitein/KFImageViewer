@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Core' do |core|
       core.source_files = 'Core/**/*'
-      core.resources = 'Core/*.png'
+      core.resources = 'Core/Resources/*.png'
   end
   
   s.subspec 'Kingfisher' do |subspec|
