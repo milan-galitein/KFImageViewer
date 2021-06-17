@@ -35,7 +35,7 @@ public enum ImagePreload {
 open class KFImageViewer: UIView {
 
     /// Scroll View to wrap the slideshow
-    public let scrollView = UIScrollView()
+    open let scrollView = UIScrollView()
 
     /// Page Control shown in the slideshow
     @available(*, deprecated, message: "Use pageIndicator.view instead")
@@ -170,7 +170,7 @@ open class KFImageViewer: UIView {
     open var preload = ImagePreload.all
 
     /// Content mode of each image in the slideshow
-    open var contentScaleMode: UIView.ContentMode = UIView.ContentMode.scaleAspectFit {
+    open var contentScaleMode: UIViewContentMode = UIViewContentMode.scaleAspectFit {
         didSet {
             for view in slideshowItems {
                 view.imageView.contentMode = contentScaleMode
@@ -472,7 +472,6 @@ open class KFImageViewer: UIView {
         fullscreen.inputs = images
         slideshowTransitioningDelegate = ZoomAnimatedTransitioningDelegate(slideshowView: self, slideshowController: fullscreen)
         fullscreen.transitioningDelegate = slideshowTransitioningDelegate
-        fullscreen.modalPresentationStyle = .fullScreen
         controller.present(fullscreen, animated: true, completion: nil)
 
         return fullscreen
