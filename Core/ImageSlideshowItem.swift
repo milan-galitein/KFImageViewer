@@ -12,21 +12,21 @@ import UIKit
 open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
 
     /// Image view to hold the image
-    let imageView = UIImageView()
+    open let imageView = UIImageView()
 
     /// Activity indicator shown during image loading, when nil there won't be shown any
-    let activityIndicator: ActivityIndicatorView?
+    open let activityIndicator: ActivityIndicatorView?
 
     open var progressView = UIProgressView()
     
     /// Input Source for the item
-    public let image: InputSource
+    open let image: InputSource
 
     /// Guesture recognizer to detect double tap to zoom
     open var gestureRecognizer: UITapGestureRecognizer?
 
     /// Holds if the zoom feature is enabled
-    public let zoomEnabled: Bool
+    open let zoomEnabled: Bool
 
     /// If set to true image is initially zoomed in
     open var zoomInInitially = false
