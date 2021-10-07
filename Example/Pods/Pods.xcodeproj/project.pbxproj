@@ -335,8 +335,8 @@
 				573C6C98267B53B600B6C3E0 /* ImageAsset.xcassets */,
 			);
 			name = Resources;
-			path = Core/Resources;
-			sourceTree = "<group>";
+			path = ../../Core/Resources;
+			sourceTree = SOURCE_ROOT;
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
