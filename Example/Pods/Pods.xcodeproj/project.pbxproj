@@ -43,7 +43,7 @@
 		AD25054D2859493A3D45078B3133BB62 /* KFImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298559F0D9F17A792A35758E531A726 /* KFImageViewer.swift */; };
 		BA86A9EF4DC03705B026832C1C5D31F0 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91647A8F0DB816B83E9D56525FA36939 /* RequestModifier.swift */; };
 		BEF058F43B038B9DC7D114F7633B5AF4 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593766F839E7E059C1FFDFEFC7279F59 /* Kingfisher.swift */; };
-		BFF33CA7270F15F1006CF005 /* ResourcePath.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFF33CA4270F1432006CF005 /* ResourcePath.bundle */; };
+		BFF33CB4270F1CF4006CF005 /* ResourcesAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF33CB3270F1CF4006CF005 /* ResourcesAssets.xcassets */; };
 		C061451B7B5377E4348B7EA3EEC85FF5 /* KFImageViewer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9018EF32D20848E0828209643ECC82 /* KFImageViewer-dummy.m */; };
 		C1A7620B5BBA514E4106A5C2FE8689FB /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AB57F53E7A8C9B43E7A7FCC1AA411 /* CacheSerializer.swift */; };
 		C327510F05EA7E00B01FA85296278295 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACEF73DDC51ADD99C0C6BBE3FAC8E4 /* ImageTransition.swift */; };
@@ -151,7 +151,7 @@
 		BCC094468AAD49AFE1061B6CD18CADAA /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
 		BEF2BC811946CD2A4AD696300DBDFF87 /* KFImageViewer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KFImageViewer.modulemap; sourceTree = "<group>"; };
 		BF81C7B8A9A0ED0708E9264F91C23FB8 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
-		BFF33CA4270F1432006CF005 /* ResourcePath.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ResourcePath.bundle; sourceTree = "<group>"; };
+		BFF33CB3270F1CF4006CF005 /* ResourcesAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ResourcesAssets.xcassets; sourceTree = "<group>"; };
 		C1AEDA93BB2DAEE0045F78936F199747 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
 		C5ACEF73DDC51ADD99C0C6BBE3FAC8E4 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
 		C75A7562AA13CC5515C8F580350ABDE4 /* Pods-KFImageViewer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KFImageViewer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -237,6 +237,7 @@
 		1CE4AF554201097AAEAF39F0DFF1EB20 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BFF33C9D270F0F18006CF005 /* Resources */,
 				B1D700B14DE2F9CAAF51FC695BA6E910 /* ActivityIndicator.swift */,
 				73A839FE4518CE0FE499E6A34DB58804 /* FullScreenSlideshowViewController.swift */,
 				F95CBD578849483038284D57F37756EB /* ImageSlideshowItem.swift */,
@@ -268,7 +269,6 @@
 		4122548AF0F51B1E2A90770C261D7EF1 /* KFImageViewer */ = {
 			isa = PBXGroup;
 			children = (
-				BFF33C9D270F0F18006CF005 /* Resources */,
 				1CE4AF554201097AAEAF39F0DFF1EB20 /* Core */,
 				C677DDEE811D9224FF94FF71A2565634 /* Pod */,
 				287486DC87F3CDB136C97CA2D45EA721 /* Support Files */,
@@ -374,7 +374,7 @@
 		BFF33C9D270F0F18006CF005 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BFF33CA4270F1432006CF005 /* ResourcePath.bundle */,
+				BFF33CB3270F1CF4006CF005 /* ResourcesAssets.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF33CA7270F15F1006CF005 /* ResourcePath.bundle in Resources */,
+				BFF33CB4270F1CF4006CF005 /* ResourcesAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
