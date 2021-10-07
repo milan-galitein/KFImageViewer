@@ -25,6 +25,7 @@
 		488B7D309A48FBF0233E263579738BCB /* ImageSlideshowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CBD578849483038284D57F37756EB /* ImageSlideshowItem.swift */; };
 		4C8D5E460C65D641894964383CC53FD6 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D15DA39C6E2CF68AE532F962CF22B9 /* Resource.swift */; };
 		517A5D0D41318E77242028CD83047EA2 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D10678DCDE585C27DF431ED1FC4FCF /* AnimatedImageView.swift */; };
+		5767E5BB270F09B500DDC1CD /* ImageAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 573C6C98267B53B600B6C3E0 /* ImageAsset.xcassets */; };
 		57ACFA0C53C4ACBF9C227A86DC307DF5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA0EE7A103885B0606126A579FBFF3 /* ImageDownloader.swift */; };
 		5C8C14F0654FB3F64F9D3020B64DFAEE /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11373FF82ED248D8BE23AE3AAA7840D6 /* Filter.swift */; };
 		68BE450919CE9FAA6CFF7C1B3C0DA686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5B9F56AF93CF31B0A76C4DBBC25A23 /* Foundation.framework */; };
@@ -575,6 +576,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5767E5BB270F09B500DDC1CD /* ImageAsset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
