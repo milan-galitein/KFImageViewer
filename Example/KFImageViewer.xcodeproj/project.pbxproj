@@ -16,6 +16,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BFF33CAB270F1879006CF005 /* ic_cross_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF33CAA270F1879006CF005 /* ic_cross_white@2x.png */; };
 		D593CAA82671FB850092269C /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D593CAA72671FB850092269C /* KingfisherSource.swift */; };
 		EA1B9741E4A84E0CEE6D4FDA /* Pods_KFImageViewer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D43578991D6818BAB04993 /* Pods_KFImageViewer_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		78D43578991D6818BAB04993 /* Pods_KFImageViewer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KFImageViewer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB50474D226CB515D76F7DA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8121A0FBC8E886C240107694 /* Pods-KFImageViewer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KFImageViewer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KFImageViewer_Tests/Pods-KFImageViewer_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BFF33CAA270F1879006CF005 /* ic_cross_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_cross_white@2x.png"; sourceTree = "<group>"; };
 		D1C167B92FE730583ADD51C7 /* Pods_KFImageViewer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KFImageViewer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D593CAA72671FB850092269C /* KingfisherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
 		D6A44A66C56C31B3722A469C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				BFF33CAA270F1879006CF005 /* ic_cross_white@2x.png */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for KFImageViewer */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -261,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF33CAB270F1879006CF005 /* ic_cross_white@2x.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				3A95797D211DA2410088F073 /* KFImageViewer.gif in Resources */,
