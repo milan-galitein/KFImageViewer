@@ -239,8 +239,7 @@
 		1CE4AF554201097AAEAF39F0DFF1EB20 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D593CB0A2672123B0092269C /* ic_cross_white@2x.png */,
-				D593CB092672123B0092269C /* ic_cross_white@3x.png */,
+				5767E5EB270F0ED700DDC1CD /* Resources */,
 				B1D700B14DE2F9CAAF51FC695BA6E910 /* ActivityIndicator.swift */,
 				73A839FE4518CE0FE499E6A34DB58804 /* FullScreenSlideshowViewController.swift */,
 				F95CBD578849483038284D57F37756EB /* ImageSlideshowItem.swift */,
@@ -293,6 +292,16 @@
 			name = "Support Files";
 			path = "../Target Support Files/Kingfisher";
 			sourceTree = "<group>";
+		};
+		5767E5EB270F0ED700DDC1CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D593CB0A2672123B0092269C /* ic_cross_white@2x.png */,
+				D593CB092672123B0092269C /* ic_cross_white@3x.png */,
+			);
+			name = Resources;
+			path = ../..;
+			sourceTree = SOURCE_ROOT;
 		};
 		61FB262C3C8954B7A3BAB123F8FDED38 /* Targets Support Files */ = {
 			isa = PBXGroup;
