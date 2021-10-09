@@ -34,10 +34,15 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   
   s.subspec 'Core' do |core|
-      core.source_files = 'Core/**/*'
-      core.resources = 'Core/Resources/*.png'
+      core.source_files = 'Core/**/*.swift'
+      core.resource_bundles = 'Core/Resources/*.png'
   end
   
+#  spec.resource_bundles = {
+#      # See Bundle.swift for why this is named like this.
+#      'CustomImageViewerLib' => ['CustomImageViewerLib/Resources/*']
+#    }
+
   s.subspec 'Kingfisher' do |subspec|
       subspec.dependency 'KFImageViewer/Core'
       subspec.dependency 'Kingfisher', '> 4.0'
