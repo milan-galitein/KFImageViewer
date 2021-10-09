@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   
   s.resource_bundles = {
       # See Bundle.swift for why this is named like this.
-      'KFImageViewer' => ['Resources/*']
+      'KFImageViewer' => ['Core/Resources/*']
     }
 
   s.subspec 'Kingfisher' do |subspec|
