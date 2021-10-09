@@ -35,13 +35,13 @@ Pod::Spec.new do |s|
   
   s.subspec 'Core' do |core|
       core.source_files = 'Core/**/*.swift'
-      core.resource_bundles = 'Core/Resources/*.png'
+      core.resource = 'Core/Resources/*.png'
   end
   
-#  spec.resource_bundles = {
-#      # See Bundle.swift for why this is named like this.
-#      'CustomImageViewerLib' => ['CustomImageViewerLib/Resources/*']
-#    }
+  s.resource_bundles = {
+      # See Bundle.swift for why this is named like this.
+      'KFImageViewer' => ['KFImageViewer/Resources/*']
+    }
 
   s.subspec 'Kingfisher' do |subspec|
       subspec.dependency 'KFImageViewer/Core'
