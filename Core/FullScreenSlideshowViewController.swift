@@ -24,6 +24,7 @@ open class FullScreenSlideshowViewController: UIViewController {
 
     /// Close button 
     open var closeButton = UIButton()
+    open var closeImageView = UIImageView()
 
     /// Close button frame
     open var closeButtonFrame: CGRect?
@@ -62,8 +63,10 @@ open class FullScreenSlideshowViewController: UIViewController {
         view.addSubview(slideshow)
 
         // close button configuration
-        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
+        closeImageView.image = UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
+//        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
+        view.addSubview(closeImageView)
         view.addSubview(closeButton)
     }
 
@@ -94,7 +97,7 @@ open class FullScreenSlideshowViewController: UIViewController {
             } else {
                 safeAreaInsets = UIEdgeInsets.zero
             }
-            
+            closeImageView.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right) + 8, y: max(10, safeAreaInsets.top) + 8, width: 20, height: 20)
             closeButton.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right), y: max(10, safeAreaInsets.top), width: 40, height: 40)
         }
 
