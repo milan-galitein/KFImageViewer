@@ -29,18 +29,23 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/faisalazeez/KFImageViewer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '9.0'
   
   s.requires_arc = true
   
   s.subspec 'Core' do |core|
-      core.source_files = 'Core/**/*'
-      core.resources = 'Core/**/*.png'
+      core.source_files = 'Core/**/*.swift'
+#      core.resource = 'Core/Resources/*.png'
   end
   
+  s.resource_bundles = {
+      # See Bundle.swift for why this is named like this.
+      'KFImageViewer' => ['Core/Resources/*']
+    }
+
   s.subspec 'Kingfisher' do |subspec|
       subspec.dependency 'KFImageViewer/Core'
-      subspec.dependency 'Kingfisher', '> 5.2'
+      subspec.dependency 'Kingfisher', '> 4.0'
       subspec.source_files = 'Kingfisher/KingfisherSource.swift'
   end
   
