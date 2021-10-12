@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Core' do |core|
       core.source_files = 'Core/**/*.swift'
-#      core.resource = 'Core/Resources/*.png'
+      core.resource = 'Core/Resources/*.png'
   end
   
   s.resource_bundles = {
