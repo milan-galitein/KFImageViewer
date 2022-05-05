@@ -66,7 +66,7 @@ open class ZoomAnimatedTransitioningDelegate: NSObject, UIViewControllerTransiti
             return
         }
 
-        let percent = min(max(fabs(gesture.translation(in: gesture.view!).y) / 200.0, 0.0), 1.0)
+        let percent = min(max(abs(gesture.translation(in: gesture.view!).y) / 200.0, 0.0), 1.0)
 
         if gesture.state == .began {
             interactionController = UIPercentDrivenInteractiveTransition()
@@ -76,7 +76,7 @@ open class ZoomAnimatedTransitioningDelegate: NSObject, UIViewControllerTransiti
         } else if gesture.state == .ended || gesture.state == .cancelled || gesture.state == .failed {
             let velocity = gesture.velocity(in: referenceSlideshowView)
 
-            if fabs(velocity.y) > 500 {
+            if abs(velocity.y) > 500 {
                 if let pageSelected = referenceSlideshowController.pageSelected {
                     pageSelected(referenceSlideshowController.slideshow.currentPage)
                 }
@@ -192,7 +192,7 @@ class ZoomInAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
         let transitionBackgroundView = UIView(frame: containerView.frame)
         transitionBackgroundView.backgroundColor = toViewController.backgroundColor
         containerView.addSubview(transitionBackgroundView)
-        containerView.sendSubview(toBack: transitionBackgroundView)
+        containerView.sendSubviewToBack(transitionBackgroundView)
 
         let finalFrame = toViewController.view.frame
 
@@ -270,7 +270,7 @@ class ZoomOutAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
         toViewController.view.frame = transitionContext.finalFrame(for: toViewController)
         toViewController.view.alpha = 0
         containerView.addSubview(toViewController.view)
-        containerView.sendSubview(toBack: toViewController.view)
+        containerView.sendSubviewToBack(toViewController.view)
 
         var transitionViewInitialFrame: CGRect
         if let currentSlideshowItem = fromViewController.slideshow.currentSlideshowItem {
@@ -307,7 +307,7 @@ class ZoomOutAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
         let transitionBackgroundView = UIView(frame: containerView.frame)
         transitionBackgroundView.backgroundColor = fromViewController.backgroundColor
         containerView.addSubview(transitionBackgroundView)
-        containerView.sendSubview(toBack: transitionBackgroundView)
+        containerView.sendSubviewToBack(transitionBackgroundView)
 
         let transitionView: UIImageView = UIImageView(image: fromViewController.slideshow.currentSlideshowItem?.imageView.image)
         transitionView.contentMode = UIView.ContentMode.scaleAspectFill
