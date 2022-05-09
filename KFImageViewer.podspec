@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     DESC
     
   s.homepage         = 'https://github.com/faisalazeez/KFImageViewer'
-  s.swift_version    = '4.0'
+  s.swift_version    = '5.0'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'faisalazeez' => 'faisalazeez7@gmail.com' }

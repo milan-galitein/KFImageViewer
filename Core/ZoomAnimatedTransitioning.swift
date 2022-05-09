@@ -141,7 +141,7 @@ extension ZoomAnimatedTransitioningDelegate: UIGestureRecognizerDelegate {
 
         if let view = gestureRecognizer.view {
             let velocity = gestureRecognizer.velocity(in: view)
-            return fabs(velocity.x) < fabs(velocity.y)
+            return abs(velocity.x) < abs(velocity.y)
         }
 
         return true
