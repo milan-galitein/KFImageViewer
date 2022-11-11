@@ -29,7 +29,9 @@
 		5C8C14F0654FB3F64F9D3020B64DFAEE /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11373FF82ED248D8BE23AE3AAA7840D6 /* Filter.swift */; };
 		68BE450919CE9FAA6CFF7C1B3C0DA686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5B9F56AF93CF31B0A76C4DBBC25A23 /* Foundation.framework */; };
 		6CE80D78B1841DD78EEA473A78D9332E /* Pods-KFImageViewer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 780FEF543146FCFDED77F467A698DF1A /* Pods-KFImageViewer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FA653EB291E7F0D005136CD /* ic_share_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FA653EA291E7F0D005136CD /* ic_share_white@2x.png */; };
+		6F15C3B9291E881000E3D7CB /* ic_cross_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4A0C33D0F3B39DD9D8DE02C1D38667 /* ic_cross_white@2x.png */; };
+		6F15C3BA291E881400E3D7CB /* ic_share_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FA653EA291E7F0D005136CD /* ic_share_white@2x.png */; };
+		6F15C3BB291E881600E3D7CB /* ic_cross_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2EE7C646580BF6B8DAB4B82C6B05298 /* ic_cross_white@3x.png */; };
 		77F8C178F3424A57825E1891F5C26598 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE40A7EAEF227D102A4A633F1DD74B7F /* Image.swift */; };
 		7CED9E0CA928AE261F74A7E78ECD6C81 /* Pods-KFImageViewer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EA83F6866586CB4E69C5E19F42B78 /* Pods-KFImageViewer_Tests-dummy.m */; };
 		83C090C0345DFED763D6741FEBC4A258 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76EBEEFF6C8E4E7A9FD92E4A3B139319 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -585,7 +587,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA653EB291E7F0D005136CD /* ic_share_white@2x.png in Resources */,
+				6F15C3BB291E881600E3D7CB /* ic_cross_white@3x.png in Resources */,
+				6F15C3BA291E881400E3D7CB /* ic_share_white@2x.png in Resources */,
+				6F15C3B9291E881000E3D7CB /* ic_cross_white@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
