@@ -127,6 +127,7 @@
 		65516FEB50A0F1D71877F8CC2B72B50F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB91E623876B328E9A708F7A99C5824 /* Pods-KFImageViewer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KFImageViewer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6E17F863EEC6CA29E2C4D0FB7ECDD19E /* Pods-KFImageViewer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KFImageViewer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		6F15C3BD291E8F2700E3D7CB /* ic_share_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_share_white@2x.png"; sourceTree = "<group>"; };
 		71287AFAF7C48DDADA45D6AB921B36EF /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
 		73A839FE4518CE0FE499E6A34DB58804 /* FullScreenSlideshowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullScreenSlideshowViewController.swift; path = Core/FullScreenSlideshowViewController.swift; sourceTree = "<group>"; };
 		750EE1FAF6BA5CD3D6D2A1626883C510 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -334,6 +335,7 @@
 			children = (
 				ED4A0C33D0F3B39DD9D8DE02C1D38667 /* ic_cross_white@2x.png */,
 				D2EE7C646580BF6B8DAB4B82C6B05298 /* ic_cross_white@3x.png */,
+				6F15C3BD291E8F2700E3D7CB /* ic_share_white@2x.png */,
 			);
 			name = Resources;
 			path = Core/Resources;
@@ -561,6 +563,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
