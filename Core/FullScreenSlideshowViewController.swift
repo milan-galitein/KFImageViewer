@@ -10,7 +10,6 @@ import UIKit
 @objcMembers
 open class FullScreenSlideshowViewController: UIViewController {
 
-    
     open var slideshow: KFImageViewer = {
         let slideshow = KFImageViewer()
         slideshow.zoomEnabled = true
@@ -22,9 +21,12 @@ open class FullScreenSlideshowViewController: UIViewController {
 
         return slideshow
     }()
-
-    /// Close button 
+    /// Share button
+    open var shareButton = UIButton()
+    
+    /// Close button
     open var closeButton = UIButton()
+    open var closeImageView = UIImageView()
 
     /// Close button frame
     open var closeButtonFrame: CGRect?
@@ -35,8 +37,8 @@ open class FullScreenSlideshowViewController: UIViewController {
     /// Index of initial image
     open var initialPage: Int = 0
 
-    /// Input sources to 
-    open var inputs: [InputSource]?
+    /// Input sources to
+     open var inputs: [InputSource]?
 
     /// Background color
     open var backgroundColor = UIColor.black
@@ -63,9 +65,17 @@ open class FullScreenSlideshowViewController: UIViewController {
         view.addSubview(slideshow)
 
         // close button configuration
-        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
+
+        shareButton.setImage(UIImage(named: "ic_share_white"), for: .normal)
+        shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
+
+        closeImageView.image = UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
+//        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
+        view.addSubview(closeImageView)
+
         view.addSubview(closeButton)
+        view.addSubview(shareButton)
     }
 
     override open var prefersStatusBarHidden: Bool {
@@ -95,8 +105,10 @@ open class FullScreenSlideshowViewController: UIViewController {
             } else {
                 safeAreaInsets = UIEdgeInsets.zero
             }
-            
-            closeButton.frame = closeButtonFrame ?? CGRect(x: max(10, safeAreaInsets.left), y: max(10, safeAreaInsets.top), width: 40, height: 40)
+            shareButton.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 50, safeAreaInsets.top) + 8, width: 40, height: 40)
+            closeImageView.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right) + 8, y: max(10, safeAreaInsets.top) + 8, width: 17, height: 17)
+            closeButton.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right), y: max(10, safeAreaInsets.top), width: 40, height: 40)
+
         }
 
         slideshow.frame = view.frame
@@ -110,4 +122,40 @@ open class FullScreenSlideshowViewController: UIViewController {
 
         dismiss(animated: true, completion: nil)
     }
+    
+    @objc func share() {
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Download", style: .default , handler:{ (UIAlertAction)in
+            self.downloadImage()
+        }))
+
+        alert.addAction(UIAlertAction(title: "Share", style: .default , handler:{ (UIAlertAction)in
+            self.shareImage()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+            
+        }))
+        
+        alert.popoverPresentationController?.sourceView = self.view
+        
+        self.present(alert, animated: true, completion: {
+          
+        })
+    }
+    
+    // share image
+    func shareImage() {
+        if let image = slideshow.currentSlideshowItem?.imageView.image {
+            let imageToShare = [image]
+            let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+    }
+    
+    func downloadImage() {
+        
+   }
 }
