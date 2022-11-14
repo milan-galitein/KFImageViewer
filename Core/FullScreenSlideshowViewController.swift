@@ -128,7 +128,7 @@ open class FullScreenSlideshowViewController: UIViewController {
     }
     
     @objc func share() {
-        let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Download", comment: "Download title"), style: .default , handler:{ (UIAlertAction)in
             self.downloadImage()
