@@ -108,8 +108,8 @@ open class FullScreenSlideshowViewController: UIViewController {
             } else {
                 safeAreaInsets = UIEdgeInsets.zero
             }
-            shareButton.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 50, safeAreaInsets.top) + 8, width: 40, height: 40)
-            shareImageView.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 50, safeAreaInsets.top) + 8, width: 22, height: 22)
+            shareButton.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 40, safeAreaInsets.top) + 8, width: 40, height: 40)
+            shareImageView.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 40, safeAreaInsets.top) + 8, width: 22, height: 22)
             closeImageView.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right) + 8, y: max(10, safeAreaInsets.top) + 8, width: 17, height: 17)
             closeButton.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right), y: max(10, safeAreaInsets.top), width: 40, height: 40)
 
@@ -130,15 +130,15 @@ open class FullScreenSlideshowViewController: UIViewController {
     @objc func share() {
         let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Download", style: .default , handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Download", comment: "Download title"), style: .default , handler:{ (UIAlertAction)in
             self.downloadImage()
         }))
 
-        alert.addAction(UIAlertAction(title: "Share", style: .default , handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Share", comment: "Share title"), style: .default , handler:{ (UIAlertAction)in
             self.shareImage()
         }))
         
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: "Dismiss title"), style: .cancel, handler:{ (UIAlertAction)in
             
         }))
         
@@ -160,6 +160,17 @@ open class FullScreenSlideshowViewController: UIViewController {
     }
     
     func downloadImage() {
-        
+        if let image = slideshow.currentSlideshowItem?.imageView.image {
+            self.writeToPhotoAlbum(image: image)
+        }
+       
    }
+    func writeToPhotoAlbum(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
+    }
+
+    @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+       
+    }
 }
+
