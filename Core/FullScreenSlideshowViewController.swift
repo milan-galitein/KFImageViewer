@@ -108,8 +108,8 @@ open class FullScreenSlideshowViewController: UIViewController {
             } else {
                 safeAreaInsets = UIEdgeInsets.zero
             }
-            shareButton.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 40, safeAreaInsets.top) + 8, width: 40, height: 40)
-            shareImageView.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 40, safeAreaInsets.top) + 8, width: 22, height: 22)
+            shareButton.frame = CGRect(x: max(15, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 45, safeAreaInsets.top) + 8, width: 40, height: 40)
+            shareImageView.frame = CGRect(x: max(15, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 45, safeAreaInsets.top) + 8, width: 20, height: 27)
             closeImageView.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right) + 8, y: max(10, safeAreaInsets.top) + 8, width: 17, height: 17)
             closeButton.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right), y: max(10, safeAreaInsets.top), width: 40, height: 40)
 
