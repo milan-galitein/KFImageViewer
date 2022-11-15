@@ -170,7 +170,7 @@ open class FullScreenSlideshowViewController: UIViewController {
     }
 
     @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        self.showToast(message: NSLocalizedString("downloaded", comment: "downloaded"), font: UIFont.systemFont(ofSize: 15))
+        self.showToast(message: NSLocalizedString("Downloaded", comment: "downloaded"), font: UIFont.systemFont(ofSize: 15))
     }
 }
 
