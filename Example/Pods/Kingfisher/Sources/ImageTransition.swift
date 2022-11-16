@@ -79,7 +79,7 @@ public enum ImageTransition {
     
     /// Custom transition.
     case custom(duration: TimeInterval,
-                options: UIView.AnimationOptions,
+                 options: UIView.AnimationOptions,
               animations: ((UIImageView, UIImage) -> Void)?,
               completion: ((Bool) -> Void)?)
     

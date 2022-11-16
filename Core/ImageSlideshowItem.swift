@@ -11,11 +11,12 @@ import UIKit
 @objcMembers
 open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
 
-    /// Image view to hold the image
-    let imageView = UIImageView()
+
+    public let imageView = UIImageView()
 
     /// Activity indicator shown during image loading, when nil there won't be shown any
-    let activityIndicator: ActivityIndicatorView?
+    public let activityIndicator: ActivityIndicatorView?
+
 
     open var progressView = UIProgressView()
     

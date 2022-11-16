@@ -67,15 +67,21 @@ open class FullScreenSlideshowViewController: UIViewController {
 
         // close button configuration
 
-//        shareButton.setImage(UIImage(named: "ic_share_white"), for: .normal)
-        shareImageView.image = UIImage(named: "ic_share_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
-        shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
-        view.addSubview(shareImageView)
+////        shareButton.setImage(UIImage(named: "ic_share_white"), for: .normal)
+//        shareImageView.image = UIImage(named: "ic_share_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
+//        shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
+//        view.addSubview(shareImageView)
+//
+//        closeImageView.image = UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
+////        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
+//        closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
+//        view.addSubview(closeImageView)
+//
 
-        closeImageView.image = UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
-//        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
+        shareButton.setImage(UIImage(named: "ic_share_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
+        shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
+        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
-        view.addSubview(closeImageView)
 
         view.addSubview(closeButton)
         view.addSubview(shareButton)

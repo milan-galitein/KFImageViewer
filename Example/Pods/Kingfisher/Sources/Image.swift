@@ -181,7 +181,7 @@ extension Kingfisher where Base: Image {
             let rep = NSBitmapImageRep(cgImage: cgimage)
             return rep.representation(using: .png, properties: [:])
         #else
-        return base.pngData()
+            return base.pngData()
         #endif
     }
     
@@ -194,7 +194,7 @@ extension Kingfisher where Base: Image {
             let rep = NSBitmapImageRep(cgImage: cgImage)
             return rep.representation(using:.jpeg, properties: [.compressionFactor: compressionQuality])
         #else
-        return base.jpegData(compressionQuality: compressionQuality)
+            return base.jpegData(compressionQuality: compressionQuality)
         #endif
     }
     
