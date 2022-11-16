@@ -66,18 +66,6 @@ open class FullScreenSlideshowViewController: UIViewController {
         view.addSubview(slideshow)
 
         // close button configuration
-
-////        shareButton.setImage(UIImage(named: "ic_share_white"), for: .normal)
-//        shareImageView.image = UIImage(named: "ic_share_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
-//        shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
-//        view.addSubview(shareImageView)
-//
-//        closeImageView.image = UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil)
-////        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
-//        closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
-//        view.addSubview(closeImageView)
-//
-
         shareButton.setImage(UIImage(named: "ic_share_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
         shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
         closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
@@ -114,9 +102,7 @@ open class FullScreenSlideshowViewController: UIViewController {
             } else {
                 safeAreaInsets = UIEdgeInsets.zero
             }
-            shareButton.frame = CGRect(x: max(15, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 45, safeAreaInsets.top) + 8, width: 40, height: 40)
-            shareImageView.frame = CGRect(x: max(15, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 45, safeAreaInsets.top) + 8, width: 20, height: 27)
-            closeImageView.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right) + 8, y: max(10, safeAreaInsets.top) + 8, width: 17, height: 17)
+            shareButton.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 50, safeAreaInsets.top) + 5, width: 40, height: 40)
             closeButton.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right), y: max(10, safeAreaInsets.top), width: 40, height: 40)
 
         }
