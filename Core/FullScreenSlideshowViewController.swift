@@ -66,8 +66,7 @@ open class FullScreenSlideshowViewController: UIViewController {
         view.addSubview(slideshow)
 
         // close button configuration
-        shareButton.setImage(UIImage(named: "ic_share", in: Bundle(for: type(of: self)), compatibleWith: nil)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: UIControl.State())
-        shareButton.tintColor = .white
+        shareButton.setImage(UIImage(named: "ic_share_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
         shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
         closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
@@ -103,7 +102,7 @@ open class FullScreenSlideshowViewController: UIViewController {
             } else {
                 safeAreaInsets = UIEdgeInsets.zero
             }
-            shareButton.frame = CGRect(x: max(10, safeAreaInsets.left), y: max(UIScreen.main.bounds.height - 50, safeAreaInsets.top) + 5, width: 40, height: 40)
+            shareButton.frame = CGRect(x: max(10, safeAreaInsets.left), y: (UIScreen.main.bounds.height - safeAreaInsets.bottom - 40) , width: 40, height: 40)
             closeButton.frame = closeButtonFrame ?? CGRect(x: max(UIScreen.main.bounds.width - 50, safeAreaInsets.right), y: max(10, safeAreaInsets.top), width: 40, height: 40)
 
         }
