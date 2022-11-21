@@ -60,6 +60,7 @@
 		EE51ABAC2B01FD784658FA6ED8297E76 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC094468AAD49AFE1061B6CD18CADAA /* String+MD5.swift */; };
 		F05C2A67BC2D26BF046CE5E4C153B615 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D700B14DE2F9CAAF51FC695BA6E910 /* ActivityIndicator.swift */; };
 		F75BAA348078CC93D3C2211499E3EF9D /* UIImage+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BBEBE4F957BBD7FB8F077D798E095E /* UIImage+AspectFit.swift */; };
+		FA074A27292B8F2F00DF8A72 /* ic_share.svg in Resources */ = {isa = PBXBuildFile; fileRef = FA074A26292B8F2F00DF8A72 /* ic_share.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,12 +170,12 @@
 		CF58A2C8B2D1E80C830DD92F91F41CBD /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		D0F9CD718F0A06821311D51A356B1ECA /* KFImageViewer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KFImageViewer-prefix.pch"; sourceTree = "<group>"; };
 		D16B9DEF218A0C34A238DE7F12989808 /* Pods_KFImageViewer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KFImageViewer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2EE7C646580BF6B8DAB4B82C6B05298 /* ic_cross_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "ic_cross_white@3x.png"; sourceTree = "<group>"; };
 		D4EFDAE0F82B6DC9A9FD82FE2FE29796 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		DA4898867061D203311A4AC3C7A70B2F /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
 		E580022B119200297BCD2257A0A929E6 /* KFImageViewer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KFImageViewer.xcconfig; sourceTree = "<group>"; };
 		F0088FC709E3907A18952C072C9C8368 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
 		F95CBD578849483038284D57F37756EB /* ImageSlideshowItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSlideshowItem.swift; path = Core/ImageSlideshowItem.swift; sourceTree = "<group>"; };
+		FA074A26292B8F2F00DF8A72 /* ic_share.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ic_share.svg; sourceTree = "<group>"; };
 		FD558208F513A70BEAAEF555B991A11C /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		FE3705E4DF75619F9AA0F0DD4F487356 /* Pods-KFImageViewer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KFImageViewer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -342,6 +343,7 @@
 				5767D791271559FB00E7C9D4 /* ic_cross_white@2x.png */,
 				6F34DA4D292369DA00DDC5CE /* ic_share_white@2x.png */,
 				6F34DA4E292369DA00DDC5CE /* ic_share_white@3x.png */,
+				FA074A26292B8F2F00DF8A72 /* ic_share.svg */,
 				5767D792271559FB00E7C9D4 /* ic_cross_white@3x.png */,
 			);
 			name = Resources;
@@ -595,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5767D794271559FB00E7C9D4 /* ic_cross_white@3x.png in Resources */,
+				FA074A27292B8F2F00DF8A72 /* ic_share.svg in Resources */,
 				6F34DA50292369DA00DDC5CE /* ic_share_white@3x.png in Resources */,
 				5767D793271559FB00E7C9D4 /* ic_cross_white@2x.png in Resources */,
 				6F34DA4F292369DA00DDC5CE /* ic_share_white@2x.png in Resources */,
@@ -1050,8 +1053,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_VERSION = 5.0;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

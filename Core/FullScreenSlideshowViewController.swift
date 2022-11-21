@@ -66,7 +66,8 @@ open class FullScreenSlideshowViewController: UIViewController {
         view.addSubview(slideshow)
 
         // close button configuration
-        shareButton.setImage(UIImage(named: "ic_share_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
+        shareButton.setImage(UIImage(named: "ic_share", in: Bundle(for: type(of: self)), compatibleWith: nil)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: UIControl.State())
+        shareButton.tintColor = .white
         shareButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.share), for: UIControl.Event.touchUpInside)
         closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControl.State())
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControl.Event.touchUpInside)
