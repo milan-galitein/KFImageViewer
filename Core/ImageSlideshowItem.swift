@@ -35,6 +35,8 @@ open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
     /// Maximum zoom scale
     open var maximumScale: CGFloat = 2.0
 
+    var hasLaidOutSubviews = false
+    
     fileprivate var lastFrame = CGRect.zero
     fileprivate var imageReleased = false
     fileprivate var isLoading = false
@@ -124,6 +126,10 @@ open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
 
         contentSize = imageView.frame.size
         maximumZoomScale = calculateMaximumScale()
+        if !hasLaidOutSubviews {
+            hasLaidOutSubviews = true
+            loadImageWithProgress()
+        }
     }
 
     /// Request to load Image Source to Image View
@@ -148,7 +154,7 @@ open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
     
     public func loadImageWithProgress()
     {
-        if self.imageView.image == nil && !isLoading {
+        if self.imageView.image == nil && !isLoading && hasLaidOutSubviews {
             isLoading = true
             imageReleased = false
             activityIndicator?.show()
